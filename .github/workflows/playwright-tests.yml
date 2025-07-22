@@ -37,17 +37,20 @@ jobs:
       # 🔐 5. Загрузить .env файл (API ключ) из секретов GitHub
       - name: Create .env file from secrets
         env:
-          API_KEY: ${{ secrets.API_KEY }},
-          USER_LOGIN: ${{ secrets.USER_LOGIN }},
-          USER_PASSWORD: ${{ secrets.USER_PASSWORD }},
-          OPEN_API_URL: ${{ secrets.OPEN_API_URL }},
+          API_KEY: ${{ secrets.API_KEY }}
+          USER_LOGIN: ${{ secrets.USER_LOGIN }}
+          USER_PASSWORD: ${{ secrets.USER_PASSWORD }}
+          OPEN_API_URL: ${{ secrets.OPEN_API_URL }}
           URL_CRM: ${{ secrets.URL_CRM }}
         run: |
-          echo "API_KEY=$API_KEY" > .env,
-          echo "USER_LOGIN=$USER_LOGIN" >> .env,
-          echo "USER_PASSWORD=$USER_PASSWORD" >> .env,
-          echo "OPEN_API_URL=$OPEN_API_URL" >> .env,
-          echo "URL_CRM=$URL_CRM" >> .env,
+          pwd
+          ls -la
+          echo "API_KEY=$API_KEY" > .env
+          echo "USER_LOGIN=$USER_LOGIN" >> .env
+          echo "USER_PASSWORD=$USER_PASSWORD" >> .env
+          echo "OPEN_API_URL=$OPEN_API_URL" >> .env
+          echo "URL_CRM=$URL_CRM" >> .env
+          ls -la
           cat .env  # Для отладки (не покажет значение, если secret)
 
       # ▶️ 6. Запустить тесты Playwright
