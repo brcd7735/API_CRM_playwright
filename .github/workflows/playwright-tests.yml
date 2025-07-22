@@ -15,11 +15,11 @@ jobs:
     steps:
       - name: 🚀 Уведомление о старте в Telegram
         run: |
-          TEXT="🚀 *Запуск автотестов*\n\n"
-          TEXT+="📂 Проект: `${{ github.repository }}`\n"
-          TEXT+="🔢 Запуск: $GITHUB_RUN_ID\n"
-          TEXT+="🧩 Ветка: $GITHUB_REF_NAME\n"
-          TEXT+="⏰ Время: $(date '+%H:%M:%S %d.%m.%Y')"
+          TEXT="*Запуск автотестов*\n\n"
+          TEXT+="Проект: `${{ github.repository }}`\n"
+          TEXT+="Запуск: $GITHUB_RUN_ID\n"
+          TEXT+="Ветка: $GITHUB_REF_NAME\n"
+          TEXT+="Время: $(date '+%H:%M:%S %d.%m.%Y')"
 
           curl -s -X POST \
             "https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage" \
