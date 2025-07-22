@@ -1,5 +1,5 @@
 import {test, expect}  from "@playwright/test";
-import {MainData} from "@utils/crm/api/crmInfo/mainData";
+import { MainData } from "@utils/crm/api/crmInfo/mainData";
 
 test('GET /openapi/v1/main/data/', async ({ request }) => {
     const mainDataCrm = new MainData(request);
