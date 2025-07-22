@@ -67,11 +67,10 @@ jobs:
       - name: 📬 Отправить результат в Telegram
         if: always()
         run: |
-          # Проверяем, завершился ли шаг с тестами успешно
           if [ "${{ steps.playwright.outcome }}" = "success" ]; then
-            TEXT="✅ <b>Тесты пройдены!</b>🔗<a href='https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}'>Детали прогона</a>"
+            TEXT="✅ <b>Тесты пройдены!</b><a href='https://brcd7735.github.io/API_CRM_playwright/ '>Открыть отчет</a>"
           else
-            TEXT="❌ <b>Тесты упали!</b>🔗<a href='https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}'>Смотреть логи</a>"
+            TEXT="❌ <b>Тесты упали!</b><a href='https://brcd7735.github.io/API_CRM_playwright/ '>Открыть отчет</a>"
           fi
 
           curl -s -X POST \
