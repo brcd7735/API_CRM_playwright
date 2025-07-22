@@ -16,7 +16,7 @@ jobs:
       - name: 🚀 Уведомление о старте в Telegram
         run: |
           curl -s -X POST \
-            "https://api.telegram.org/bot ${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage" \
+            "https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage" \
             -d chat_id="${{ secrets.TELEGRAM_CHAT_ID }}" \
             -d text="🚀 <b>Запуск автотестов</b>\n\nПроект: <code>${{ github.repository }}</code>\nЗапуск: $GITHUB_RUN_ID\nВетка: $GITHUB_REF_NAME" \
             -d parse_mode=HTML
@@ -70,13 +70,13 @@ jobs:
           {% raw %}
           # Проверяем, завершился ли шаг с тестами успешно
           if [ "${{ steps.playwright.outcome }}" = "success" ]; then
-            TEXT="✅ <b>Тесты пройдены!</b>\n\n🔗 <a href='https://github.com/ ${{ github.repository }}/actions/runs/${{ github.run_id }}'>Детали прогона</a>"
+            TEXT="✅ <b>Тесты пройдены!</b>\n\n🔗 <a href='https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}'>Детали прогона</a>"
           else
-            TEXT="❌ <b>Тесты упали!</b>\n\n🔗 <a href='https://github.com/ ${{ github.repository }}/actions/runs/${{ github.run_id }}'>Смотреть логи</a>"
+            TEXT="❌ <b>Тесты упали!</b>\n\n🔗 <a href='https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}'>Смотреть логи</a>"
           fi
 
           curl -s -X POST \
-            "https://api.telegram.org/bot ${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage" \
+            "https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage" \
             -d chat_id="${{ secrets.TELEGRAM_CHAT_ID }}" \
             -d text="$TEXT" \
             -d parse_mode=HTML
