@@ -15,7 +15,7 @@ module.exports = defineConfig({
   workers: process.env.CI ? 1 : undefined,
   reporter: [
     ['list'], // Консольный вывод
-    ['html', { open: 'never' }]
+    ['json', { outputFile: 'test-results/results.json'}]
   ],
   use: {
     baseURL: process.env.OPEN_API_URL,
