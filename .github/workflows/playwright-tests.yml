@@ -18,7 +18,7 @@ jobs:
           curl -s -X POST \
             "https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage" \
             -d chat_id="${{ secrets.TELEGRAM_CHAT_ID }}" \
-            -d text="<b>Запуск автотестов</b>Проект: <code>${{ github.repository }}</code> Запуск: $GITHUB_RUN_ID Ветка: $GITHUB_REF_NAME" \
+            -d text="<b>Запуск автотестов </b> Проект: <code>${{ github.repository }}</code> <br> Запуск: $GITHUB_RUN_ID <br> Ветка: $GITHUB_REF_NAME" \
             -d parse_mode=HTML
 
       - name: Checkout code
@@ -73,10 +73,10 @@ jobs:
             TEXT="❌ <b>Тесты упали!</b>\n\n"
           fi
 
-          TEXT+="📂 Проект: <code>${{ github.repository }}</code>\n"
-          TEXT+="🔢 Прогон: $GITHUB_RUN_ID\n"
-          TEXT+="⏱ Время выполнения: $DURATION_STR\n"
-          TEXT+="📅 Дата: $(date '+%d.%m.%Y %H:%M:%S')\n"
+          TEXT+="📂 Проект: <code>${{ github.repository }}</code><br>"
+          TEXT+="🔢 ID прогона: $GITHUB_RUN_ID<br>"
+          TEXT+="⏱ Время выполнения: $DURATION_STR<br>"
+          TEXT+="📅 Дата: $(date '+%d.%m.%Y %H:%M:%S')<br>"
           TEXT+="🔗 <a href='https://brcd7735.github.io/API_CRM_playwright/'>Открыть HTML-отчёт</a>"
 
           # Отправляем
