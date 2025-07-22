@@ -67,7 +67,6 @@ jobs:
       - name: 📬 Отправить результат в Telegram
         if: always()
         run: |
-          {% raw %}
           # Проверяем, завершился ли шаг с тестами успешно
           if [ "${{ steps.playwright.outcome }}" = "success" ]; then
             TEXT="✅ <b>Тесты пройдены!</b>🔗<a href='https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}'>Детали прогона</a>"
@@ -80,7 +79,6 @@ jobs:
             -d chat_id="${{ secrets.TELEGRAM_CHAT_ID }}"\
             -d text="$TEXT"\
             -d parse_mode=HTML
-          {% endraw %}
 
       - name: Deploy to GitHub Pages
         if: success()
