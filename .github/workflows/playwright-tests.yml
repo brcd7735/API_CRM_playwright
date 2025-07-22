@@ -67,16 +67,38 @@ jobs:
       - name: 📬 Отправить результат в Telegram
         if: always()
         run: |
-          if [ "${{ steps.playwright.outcome }}" = "success" ]; then
-            TEXT="✅ <b>Тесты пройдены!</b><a href='https://brcd7735.github.io/API_CRM_playwright/ '>Открыть отчет</a>"
+          # Получаем время начала и конца в секундах
+          START_TIME=$(echo "${{ github.event.workflow_run.created_at }}" | date -u -f '%Y-%m-%dT%H:%M:%SZ' +%s 2>/dev/null || echo $(date -d '1 hour ago' +%s))
+          END_TIME=$(date +%s)
+          DURATION=$((END_TIME - START_TIME))
+
+          # Форматируем: 65 сек → 1 мин 5 сек
+          MINUTES=$((DURATION / 60))
+          SECONDS=$((DURATION % 60))
+          if [ $MINUTES -gt 0 ]; then
+            DURATION_STR="${MINUTES} мин ${SECONDS} сек"
           else
-            TEXT="❌ <b>Тесты упали!</b><a href='https://brcd7735.github.io/API_CRM_playwright/ '>Открыть отчет</a>"
+            DURATION_STR="${SECONDS} сек"
           fi
 
+          # Формируем текст
+          if [ "${{ steps.playwright.outcome }}" = "success" ]; then
+            TEXT="✅ <b>Тесты пройдены!</b>\n\n"
+          else
+            TEXT="❌ <b>Тесты упали!</b>\n\n"
+          fi
+
+          TEXT+="📂 Проект: <code>${{ github.repository }}</code>\n"
+          TEXT+="🔢 Прогон: $GITHUB_RUN_ID\n"
+          TEXT+="⏱ Время выполнения: $DURATION_STR\n"
+          TEXT+="📅 Дата: $(date '+%d.%m.%Y %H:%M:%S')\n"
+          TEXT+="🔗 <a href='https://brcd7735.github.io/API_CRM_playwright/ '>Открыть HTML-отчёт</a>"
+
+          # Отправляем
           curl -s -X POST \
-            "https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage"\
-            -d chat_id="${{ secrets.TELEGRAM_CHAT_ID }}"\
-            -d text="$TEXT"\
+            "https://api.telegram.org/bot ${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage" \
+            -d chat_id="${{ secrets.TELEGRAM_CHAT_ID }}" \
+            -d text="$TEXT" \
             -d parse_mode=HTML
 
       - name: Deploy to GitHub Pages
