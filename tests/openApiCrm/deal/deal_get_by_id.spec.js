@@ -1,0 +1,8 @@
+import {DealGetById} from "@utils/crm/api/deal/dealGetById";
+import {test, expect} from "@playwright/test";
+
+test("POST /deal/get/", async ({request}) => {
+    const getDealById = new DealGetById(request);
+    const response = await getDealById.getDealById(request);
+    expect(response).toBeDefined();
+})
