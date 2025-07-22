@@ -18,16 +18,10 @@ module.exports = defineConfig({
     ['html', { open: 'never' }]
   ],
   use: {
+    baseURL: process.env.OPEN_API_URL,
     trace: 'on-first-retry',
     screenshot: 'only-on-failure',
     video: 'retain-on-failure'
-  },
-  configure: (config) => {
-    config.env = {
-      ...process.env,    // Переменные системы + .env
-      ...config.env,     // Существующие переменные конфига
-    };
-    return config;
   },
   projects: [
     {

@@ -3,7 +3,6 @@
 export class BaseApi {
     constructor() {
         this.apiKey = process.env.API_KEY;
-        this.baseUrl = process.env.URL_CRM;
         this.apiUrl = process.env.OPEN_API_URL;
     }
 
