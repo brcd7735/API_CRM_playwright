@@ -1,0 +1,619 @@
+{
+  "config": {
+    "configFile": "/home/runner/work/API_CRM_playwright/API_CRM_playwright/playwright.config.js",
+    "rootDir": "/home/runner/work/API_CRM_playwright/API_CRM_playwright/tests",
+    "forbidOnly": true,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "ci": {
+        "commitHref": "https://github.com/brcd7735/API_CRM_playwright/commit/e98c43603019090334194d2ad5bfebf6dc02207b",
+        "commitHash": "e98c43603019090334194d2ad5bfebf6dc02207b",
+        "buildHref": "https://github.com/brcd7735/API_CRM_playwright/actions/runs/16444400316"
+      },
+      "gitCommit": {
+        "shortHash": "e98c436",
+        "hash": "e98c43603019090334194d2ad5bfebf6dc02207b",
+        "subject": "test action",
+        "body": "test action\n",
+        "author": {
+          "name": "Владислав",
+          "email": "47949676+brcd7735@users.noreply.github.com",
+          "time": 1753187580000
+        },
+        "committer": {
+          "name": "Владислав",
+          "email": "47949676+brcd7735@users.noreply.github.com",
+          "time": 1753187580000
+        },
+        "branch": "main"
+      },
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "test-results/results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "/home/runner/work/API_CRM_playwright/API_CRM_playwright/test-results",
+        "repeatEach": 1,
+        "retries": 2,
+        "metadata": {
+          "ci": {
+            "commitHref": "https://github.com/brcd7735/API_CRM_playwright/commit/e98c43603019090334194d2ad5bfebf6dc02207b",
+            "commitHash": "e98c43603019090334194d2ad5bfebf6dc02207b",
+            "buildHref": "https://github.com/brcd7735/API_CRM_playwright/actions/runs/16444400316"
+          },
+          "gitCommit": {
+            "shortHash": "e98c436",
+            "hash": "e98c43603019090334194d2ad5bfebf6dc02207b",
+            "subject": "test action",
+            "body": "test action\n",
+            "author": {
+              "name": "Владислав",
+              "email": "47949676+brcd7735@users.noreply.github.com",
+              "time": 1753187580000
+            },
+            "committer": {
+              "name": "Владислав",
+              "email": "47949676+brcd7735@users.noreply.github.com",
+              "time": 1753187580000
+            },
+            "branch": "main"
+          },
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/home/runner/work/API_CRM_playwright/API_CRM_playwright/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.53.2",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "openApiCrm/crmInfo/main_data.spec.js",
+      "file": "openApiCrm/crmInfo/main_data.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "GET /openapi/v1/main/data/",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 893,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "Запрос отправлен: https://autocrm.crm.testserver.myenvy.ru/openapi/v1/main/data/?api_key=c32689782fe20e077de0756e59d1dadb0c4a93d5\n"
+                    },
+                    {
+                      "text": "Статус ответа: 200\n"
+                    },
+                    {
+                      "text": "Ответ: {\n  crm: {\n    id: \u001b[33m1259\u001b[39m,\n    user_id: \u001b[33m9134\u001b[39m,\n    callback_id: \u001b[33m106\u001b[39m,\n    name: \u001b[32m'AutoCRM'\u001b[39m,\n    api_key: \u001b[32m'c32689782fe20e077de0756e59d1dadb0c4a93d5'\u001b[39m,\n    demo_at: \u001b[32m'2025-05-21 22:35:28'\u001b[39m,\n    solution_id: \u001b[1mnull\u001b[22m,\n    created_at: \u001b[32m'2025-05-21 22:35:28'\u001b[39m,\n    updated_at: \u001b[32m'2025-05-21 22:48:48'\u001b[39m,\n    deleted_at: \u001b[1mnull\u001b[22m,\n    domain: \u001b[32m'autocrm.crm.testserver.myenvy.ru'\u001b[39m,\n    tariff: {\n      id: \u001b[33m1757\u001b[39m,\n      start_at: \u001b[32m'2025-06-02 14:23:16'\u001b[39m,\n      end_at: \u001b[32m'2026-06-02 14:23:16'\u001b[39m,\n      count: \u001b[33m30\u001b[39m,\n      type: \u001b[32m'crm_paid_12'\u001b[39m\n    },\n    tariff_end_at: \u001b[32m'2026-06-02 14:23:16'\u001b[39m,\n    inbox_types: [\n      \u001b[36m[Object]\u001b[39m, \u001b[36m[Object]\u001b[39m,\n      \u001b[36m[Object]\u001b[39m, \u001b[36m[Object]\u001b[39m,\n      \u001b[36m[Object]\u001b[39m, \u001b[36m[Object]\u001b[39m,\n      \u001b[36m[Object]\u001b[39m, \u001b[36m[Object]\u001b[39m,\n      \u001b[36m[Object]\u001b[39m, \u001b[36m[Object]\u001b[39m,\n      \u001b[36m[Object]\u001b[39m\n    ],\n    settings: {\n      create_task_no_time: \u001b[36m[Object]\u001b[39m,\n      tz_country_id: \u001b[36m[Object]\u001b[39m,\n      tz_id: \u001b[36m[Object]\u001b[39m,\n      change_deal_inputs_position: \u001b[36m[Object]\u001b[39m,\n      utc: \u001b[36m[Object]\u001b[39m,\n      workdays_same: \u001b[36m[Object]\u001b[39m,\n      telephony: \u001b[36m[Object]\u001b[39m,\n      show_ip_place_in_inbox: \u001b[36m[Object]\u001b[39m,\n      first_login_from_crm: \u001b[36m[Object]\u001b[39m,\n      show_lead_id_in_card: \u001b[36m[Object]\u001b[39m,\n      no_search_lead_api: \u001b[36m[Object]\u001b[39m,\n      lead_name_to_client: \u001b[36m[Object]\u001b[39m,\n      enable_invoices: \u001b[36m[Object]\u001b[39m,\n      show_invoice_btn: \u001b[36m[Object]\u001b[39m,\n      enable_distribution_leads: \u001b[36m[Object]\u001b[39m,\n      deal_name: \u001b[36m[Object]\u001b[39m,\n      telephony_beeline_subscription_list: \u001b[36m[Object]\u001b[39m,\n      client_show_time_fields: \u001b[36m[Object]\u001b[39m,\n      default_inbox_type_id: \u001b[36m[Object]\u001b[39m,\n      show_user_in_work: \u001b[36m[Object]\u001b[39m,\n      storage: \u001b[36m[Object]\u001b[39m,\n      storage_yandex_disk_token: \u001b[36m[Object]\u001b[39m,\n      show_next_client: \u001b[36m[Object]\u001b[39m,\n      btn_action_use_time_work: \u001b[36m[Object]\u001b[39m,\n      tasks_timeline_1: \u001b[36m[Object]\u001b[39m,\n      tasks_timeline_2: \u001b[36m[Object]\u001b[39m,\n      storage_google_drive_token: \u001b[36m[Object]\u001b[39m,\n      auto_task_timeout: \u001b[36m[Object]\u001b[39m,\n      inbox_no_create_call_out: \u001b[36m[Object]\u001b[39m,\n      facebook_lead_enabled: \u001b[36m[Object]\u001b[39m,\n      facebook_lead_token: \u001b[36m[Object]\u001b[39m,\n      facebook_lead_expire: \u001b[36m[Object]\u001b[39m,\n      facebook_pages_list: \u001b[36m[Object]\u001b[39m,\n      facebook_pages_settings: \u001b[36m[Object]\u001b[39m,\n      facebook_inbox_type_id: \u001b[36m[Object]\u001b[39m,\n      day_tasks_timeline_max: \u001b[36m[Object]\u001b[39m,\n      show_datetime_in_work: \u001b[36m[Object]\u001b[39m,\n      enable_three_month_to_prolongation: \u001b[36m[Object]\u001b[39m,\n      show_client_create_date: \u001b[36m[Object]\u001b[39m,\n      telephony_from_call: \u001b[36m[Object]\u001b[39m,\n      show_comment_in_work: \u001b[36m[Object]\u001b[39m,\n      trained_by_envybox: \u001b[36m[Object]\u001b[39m,\n      default_service_from_sms: \u001b[36m[Object]\u001b[39m,\n      ip_access: \u001b[36m[Object]\u001b[39m,\n      dashboard_access: \u001b[36m[Object]\u001b[39m,\n      collapse_contacts: \u001b[36m[Object]\u001b[39m,\n      google_analytics_integration_enabled: \u001b[36m[Object]\u001b[39m,\n      google_analytics_tracking_id: \u001b[36m[Object]\u001b[39m,\n      google_analytics_input_id: \u001b[36m[Object]\u001b[39m,\n      last_calls_access: \u001b[36m[Object]\u001b[39m,\n      google_analytics_currency: \u001b[36m[Object]\u001b[39m,\n      interval_repeated_call: \u001b[36m[Object]\u001b[39m,\n      always_to_inbox_on_repeated_call: \u001b[36m[Object]\u001b[39m,\n      existing_client_addition: \u001b[36m[Object]\u001b[39m,\n      enable_document_print: \u001b[36m[Object]\u001b[39m,\n      action_lead_to_worked_deal: \u001b[36m[Object]\u001b[39m,\n      show_sip_connector: \u001b[36m[Object]\u001b[39m,\n      use_elasticsearch: \u001b[36m[Object]\u001b[39m,\n      v2: \u001b[36m[Object]\u001b[39m,\n      show_lead_name_in_card: \u001b[36m[Object]\u001b[39m,\n      filter_input_condition: \u001b[36m[Object]\u001b[39m,\n      action_lead_to_closed_deal: \u001b[36m[Object]\u001b[39m,\n      trained_by_envybox_partners: \u001b[36m[Object]\u001b[39m,\n      action_lead_to_realized_deal: \u001b[36m[Object]\u001b[39m,\n      show_next_client_settings: \u001b[36m[Object]\u001b[39m,\n      enabled_call_notify: \u001b[36m[Object]\u001b[39m,\n      show_client_time_in_work: \u001b[36m[Object]\u001b[39m,\n      show_calendar_in_date_time_pick_next_contact: \u001b[36m[Object]\u001b[39m,\n      consider_client_time_for_auto_action_time: \u001b[36m[Object]\u001b[39m,\n      select_telephony_on_outgoing_call: \u001b[36m[Object]\u001b[39m,\n      always_to_inbox_mails: \u001b[36m[Object]\u001b[39m,\n      yandex_metrika_integration_enabled: \u001b[36m[Object]\u001b[39m,\n      yandex_metrika_settings: \u001b[36m[Object]\u001b[39m,\n      yandex_metrika_tokens: \u001b[36m[Object]\u001b[39m,\n      format_8_started: \u001b[36m[Object]\u001b[39m,\n      enable_distribution_leads_inbox_types: \u001b[36m[Object]\u001b[39m,\n      enable_distribution_leads_departments: \u001b[36m[Object]\u001b[39m,\n      google_analytics_version_4_enabled: \u001b[36m[Object]\u001b[39m,\n      google_analytics_measurement_id: \u001b[36m[Object]\u001b[39m,\n      google_analytics_api_secret: \u001b[36m[Object]\u001b[39m,\n      user_service_schedule_access: \u001b[36m[Object]\u001b[39m,\n      show_user_service_schedule_access_setting: \u001b[36m[Object]\u001b[39m,\n      not_handle_calls_from_non_exist_clients_check_list_enabled: \u001b[36m[Object]\u001b[39m,\n      not_handle_calls_from_non_exist_clients_check_list_data: \u001b[36m[Object]\u001b[39m,\n      enable_hh_integration: \u001b[36m[Object]\u001b[39m,\n      enable_simplified_tariff: \u001b[36m[Object]\u001b[39m,\n      enable_deal_closed_at: \u001b[36m[Object]\u001b[39m,\n      enable_deal_service_inputs: \u001b[36m[Object]\u001b[39m,\n      action_fixed_emails_deal: \u001b[36m[Object]\u001b[39m,\n      enable_fixed_emails_is_outbox_client: \u001b[36m[Object]\u001b[39m,\n      show_add_to_schedule_btn: \u001b[36m[Object]\u001b[39m,\n      chat_for_initial_sales: \u001b[36m[Object]\u001b[39m,\n      telephony_beeline_v2_subscription_id: \u001b[36m[Object]\u001b[39m,\n      show_contact_types_adding_client: \u001b[36m[Object]\u001b[39m,\n      contact_type_ids_adding_client: \u001b[36m[Object]\u001b[39m\n    },\n    users: [ \u001b[36m[Object]\u001b[39m, \u001b[36m[Object]\u001b[39m, \u001b[36m[Object]\u001b[39m, \u001b[36m[Object]\u001b[39m ]\n  },\n  lead: { pipelines: [ \u001b[36m[Object]\u001b[39m ], custom_fields: [] },\n  client: {\n    custom_fields: [\n      \u001b[36m[Object]\u001b[39m, \u001b[36m[Object]\u001b[39m,\n      \u001b[36m[Object]\u001b[39m, \u001b[36m[Object]\u001b[39m,\n      \u001b[36m[Object]\u001b[39m, \u001b[36m[Object]\u001b[39m,\n      \u001b[36m[Object]\u001b[39m, \u001b[36m[Object]\u001b[39m,\n      \u001b[36m[Object]\u001b[39m, \u001b[36m[Object]\u001b[39m,\n      \u001b[36m[Object]\u001b[39m, \u001b[36m[Object]\u001b[39m,\n      \u001b[36m[Object]\u001b[39m\n    ]\n  },\n  deal: {\n    pipelines: [ \u001b[36m[Object]\u001b[39m, \u001b[36m[Object]\u001b[39m, \u001b[36m[Object]\u001b[39m ],\n    custom_fields: [\n      \u001b[36m[Object]\u001b[39m, \u001b[36m[Object]\u001b[39m,\n      \u001b[36m[Object]\u001b[39m, \u001b[36m[Object]\u001b[39m,\n      \u001b[36m[Object]\u001b[39m, \u001b[36m[Object]\u001b[39m,\n      \u001b[36m[Object]\u001b[39m, \u001b[36m[Object]\u001b[39m,\n      \u001b[36m[Object]\u001b[39m, \u001b[36m[Object]\u001b[39m,\n      \u001b[36m[Object]\u001b[39m, \u001b[36m[Object]\u001b[39m\n    ]\n  },\n  message: \u001b[32m'success'\u001b[39m,\n  status_code: \u001b[33m200\u001b[39m\n}\n"
+                    },
+                    {
+                      "text": "✅ [ТЕСТ END] Ответ получен: \u001b[33m200\u001b[39m\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-07-22T12:38:57.129Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "09e68d5d7bda7087d5c8-4a663e11cc257932cad4",
+          "file": "openApiCrm/crmInfo/main_data.spec.js",
+          "line": 4,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "openApiCrm/deal/deal_get_by_id.spec.js",
+      "file": "openApiCrm/deal/deal_get_by_id.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "POST /deal/get/",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 594,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-07-22T12:38:58.036Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "175f4035ca149c22c38a-a2c6adddc8b405004d33",
+          "file": "openApiCrm/deal/deal_get_by_id.spec.js",
+          "line": 4,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "openApiCrm/deal/deal_list.spec.js",
+      "file": "openApiCrm/deal/deal_list.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "POST /deal/list/",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 434,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-07-22T12:38:58.636Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "524cec6d56de75dac365-5dfbf471504de8475372",
+          "file": "openApiCrm/deal/deal_list.spec.js",
+          "line": 4,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "openApiCrm/lead/lead_get.spec.js",
+      "file": "openApiCrm/lead/lead_get.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "POST /openapi/v1/lead/set/",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 577,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "Запрос отправлен: https://autocrm.crm.testserver.myenvy.ru/openapi/v1/lead/list/?api_key=c32689782fe20e077de0756e59d1dadb0c4a93d5\n"
+                    },
+                    {
+                      "text": "Статус ответа: 200\n"
+                    },
+                    {
+                      "text": "Запрос отправлен: https://autocrm.crm.testserver.myenvy.ru/openapi/v1/lead/get/?api_key=c32689782fe20e077de0756e59d1dadb0c4a93d5\n"
+                    },
+                    {
+                      "text": "Статус ответа: 200\n"
+                    },
+                    {
+                      "text": "Ответ: {\n  result: {\n    id: \u001b[33m181576\u001b[39m,\n    parent_id: \u001b[33m0\u001b[39m,\n    crm_id: \u001b[33m1259\u001b[39m,\n    stage_id: \u001b[33m3483\u001b[39m,\n    user_id: \u001b[33m9134\u001b[39m,\n    employee_id: \u001b[33m17282\u001b[39m,\n    old_employee_id: \u001b[1mnull\u001b[22m,\n    department_id: \u001b[33m0\u001b[39m,\n    pipeline_id: \u001b[33m6264\u001b[39m,\n    deal_pipeline_id: \u001b[33m6269\u001b[39m,\n    deal_stage_id: \u001b[33m0\u001b[39m,\n    status: \u001b[33m2\u001b[39m,\n    inbox_type_id: \u001b[33m14665\u001b[39m,\n    it_reaction: \u001b[33m0\u001b[39m,\n    in_call: \u001b[33m0\u001b[39m,\n    link_client_id: \u001b[1mnull\u001b[22m,\n    stage_updated_at: \u001b[32m'2025-06-14 15:51:53'\u001b[39m,\n    created_at: \u001b[32m'2025-06-14 15:51:53'\u001b[39m,\n    updated_at: \u001b[32m'2025-06-14 15:51:53'\u001b[39m,\n    deleted_at: \u001b[1mnull\u001b[22m,\n    stage: \u001b[32m'Еще не взяли в работу'\u001b[39m,\n    stage_color: \u001b[32m'rgb(35, 148, 254)'\u001b[39m,\n    name: \u001b[32m'Петр Сидоров'\u001b[39m,\n    phone: \u001b[32m'73260817326'\u001b[39m,\n    mask: \u001b[1mnull\u001b[22m,\n    email: \u001b[32m'vp2wid@example.com'\u001b[39m,\n    time: \u001b[1mnull\u001b[22m,\n    no_time: \u001b[1mnull\u001b[22m,\n    last_comment: \u001b[1mnull\u001b[22m,\n    created_at_msk: \u001b[32m'2025-06-14 15:51:53'\u001b[39m,\n    values: { service: \u001b[36m[Object]\u001b[39m, custom: \u001b[36m[Object]\u001b[39m },\n    deals: []\n  },\n  message: \u001b[32m'success'\u001b[39m,\n  status_code: \u001b[33m200\u001b[39m\n}\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-07-22T12:38:59.077Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a4d5c69026efca018eb3-98c723476fb4d8a660d7",
+          "file": "openApiCrm/lead/lead_get.spec.js",
+          "line": 5,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "openApiCrm/lead/lead_list.spec.js",
+      "file": "openApiCrm/lead/lead_list.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "POST /openapi/v1/lead/list/",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 429,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "Запрос отправлен: https://autocrm.crm.testserver.myenvy.ru/openapi/v1/lead/list/?api_key=c32689782fe20e077de0756e59d1dadb0c4a93d5\n"
+                    },
+                    {
+                      "text": "Статус ответа: 200\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-07-22T12:38:59.659Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3afe5c4db0bb2073e4c0-10f038b22bc121180de6",
+          "file": "openApiCrm/lead/lead_list.spec.js",
+          "line": 4,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "openApiCrm/lead/lead_log_list.spec.js",
+      "file": "openApiCrm/lead/lead_log_list.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "GET /lead/log/list/",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-07-22T12:39:00.092Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d48ce2916ec91c1112d6-396467a49e732c562b41",
+          "file": "openApiCrm/lead/lead_log_list.spec.js",
+          "line": 3,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "openApiCrm/lead/lead_search.spec.js",
+      "file": "openApiCrm/lead/lead_search.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "POST /lead/search/",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 635,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "Запрос отправлен: https://autocrm.crm.testserver.myenvy.ru/openapi/v1/lead/list/?api_key=c32689782fe20e077de0756e59d1dadb0c4a93d5\n"
+                    },
+                    {
+                      "text": "Статус ответа: 200\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-07-22T12:39:00.099Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ae2908f4ce11d48d4c8f-017c9e571b6a5ead099f",
+          "file": "openApiCrm/lead/lead_search.spec.js",
+          "line": 4,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "openApiCrm/lead/lead_set.spec.js",
+      "file": "openApiCrm/lead/lead_set.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "POST /openapi/v1/lead/set/",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 1200000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4932,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "Создан лид № 1\n"
+                    },
+                    {
+                      "text": "\u001b[33m0\u001b[39m\n"
+                    },
+                    {
+                      "text": "Запрос отправлен: https://autocrm.crm.testserver.myenvy.ru/openapi/v1/lead/set/?api_key=c32689782fe20e077de0756e59d1dadb0c4a93d5\n"
+                    },
+                    {
+                      "text": "Статус ответа: 200\n"
+                    },
+                    {
+                      "text": "Ответ: { id: \u001b[33m182423\u001b[39m, message: \u001b[32m'success'\u001b[39m, status_code: \u001b[33m200\u001b[39m }\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-07-22T12:39:00.739Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c161513bf51924b2531f-8e33108317fb2a859de7",
+          "file": "openApiCrm/lead/lead_set.spec.js",
+          "line": 6,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "openApiCrm/lead/lead_start.spec.js",
+      "file": "openApiCrm/lead/lead_start.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "POST /lead/start/",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1574,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "Запрос отправлен: https://autocrm.crm.testserver.myenvy.ru/openapi/v1/lead/set/?api_key=c32689782fe20e077de0756e59d1dadb0c4a93d5\n"
+                    },
+                    {
+                      "text": "Статус ответа: 200\n"
+                    },
+                    {
+                      "text": "Ответ: { id: \u001b[33m182424\u001b[39m, message: \u001b[32m'success'\u001b[39m, status_code: \u001b[33m200\u001b[39m }\n"
+                    },
+                    {
+                      "text": "Используется переданный dealId: 625737\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-07-22T12:39:05.942Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "eb956406d6072552b097-9bff30b9159996dc9ed2",
+          "file": "openApiCrm/lead/lead_start.spec.js",
+          "line": 4,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "openApiCrm/lead/lead_work_set.spec.js",
+      "file": "openApiCrm/lead/lead_work_set.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "POST /openapi/v1/lead/workset/",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4842,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "Создан лид № 1\n"
+                    },
+                    {
+                      "text": "Запрос отправлен: https://autocrm.crm.testserver.myenvy.ru/openapi/v1/lead/set/?api_key=c32689782fe20e077de0756e59d1dadb0c4a93d5\n"
+                    },
+                    {
+                      "text": "Статус ответа: 200\n"
+                    },
+                    {
+                      "text": "Ответ: { id: \u001b[33m182425\u001b[39m, message: \u001b[32m'success'\u001b[39m, status_code: \u001b[33m200\u001b[39m }\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-07-22T12:39:07.522Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7a9b7edc022de647e85f-548c95f8b486ec87933b",
+          "file": "openApiCrm/lead/lead_work_set.spec.js",
+          "line": 5,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2025-07-22T12:38:56.325Z",
+    "duration": 16096.063999999998,
+    "expected": 10,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}
