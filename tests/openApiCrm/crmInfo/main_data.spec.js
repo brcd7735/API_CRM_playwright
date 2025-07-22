@@ -6,4 +6,5 @@ test('GET /openapi/v1/main/data/', async ({ request }) => {
 
     const response = await mainDataCrm.GetMainDataCrm();
     expect(response).toBeDefined();
+    expect(response.status_code).toBe(200);
 })
