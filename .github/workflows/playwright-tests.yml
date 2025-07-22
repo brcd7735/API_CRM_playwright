@@ -44,10 +44,10 @@ jobs:
           URL_CRM: ${{ secrets.URL_CRM }}
         run: |
           echo "API_KEY=$API_KEY" > .env,
-          echo "USER_LOGIN=$"USER_LOGIN" >> .env,
-          echo "USER_PASSWORD=$"USER_PASSWORD" >> .env,
-          echo "OPEN_API_URL=$"OPEN_API_URL" >> .env,
-          echo "URL_CRM=$"URL_CRM" >> .env,
+          echo "USER_LOGIN=$USER_LOGIN" >> .env,
+          echo "USER_PASSWORD=$USER_PASSWORD" >> .env,
+          echo "OPEN_API_URL=$OPEN_API_URL" >> .env,
+          echo "URL_CRM=$URL_CRM" >> .env,
           cat .env  # Для отладки (не покажет значение, если secret)
 
       # ▶️ 6. Запустить тесты Playwright
