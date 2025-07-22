@@ -45,7 +45,7 @@ jobs:
           cat .env 
 
       - name: Run Playwright tests
-        run: npx playwright test --config=playwright.config.js --reporter=list,json
+        run: npx playwright test --config=playwright.config.js
 
       - name: Upload test results
         if: always()
