@@ -19,7 +19,7 @@ jobs:
             "https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage" \
             -d chat_id="${{ secrets.TELEGRAM_CHAT_ID }}" \
             -d text="<b>Запуск автотестов </b> Проект: <code>${{ github.repository }}</code> <br> Запуск: $GITHUB_RUN_ID <br> Ветка: $GITHUB_REF_NAME" \
-            -d parse_mode=HTML
+            -d parse_mode=MarkdownV2
 
       - name: Checkout code
         uses: actions/checkout@v4
@@ -84,7 +84,7 @@ jobs:
             "https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage" \
             -d chat_id="${{ secrets.TELEGRAM_CHAT_ID }}" \
             -d text="$TEXT" \
-            -d parse_mode=HTML
+            -d parse_mode=MarkdownV2
 
       - name: Deploy to GitHub Pages
         if: success()
