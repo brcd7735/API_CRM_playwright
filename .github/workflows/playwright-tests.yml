@@ -37,7 +37,11 @@ jobs:
       # 🔐 5. Загрузить .env файл (API ключ) из секретов GitHub
       - name: Create .env file from secrets
         env:
-          API_KEY: ${{ secrets.API_KEY }}
+          API_KEY: ${{ secrets.API_KEY }},
+          USER_LOGIN: ${{ secrets.USER_LOGIN }},
+          USER_PASSWORD: ${{ secrets.USER_PASSWORD }},
+          OPEN_API_URL: ${{ secrets.OPEN_API_URL }},
+          URL_CRM: ${{ secrets.URL_CRM }}
         run: |
           echo "API_KEY=$API_KEY" > .env
           cat .env  # Для отладки (не покажет значение, если secret)
