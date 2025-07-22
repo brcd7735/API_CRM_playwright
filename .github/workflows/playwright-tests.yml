@@ -74,25 +74,25 @@ jobs:
         if: always()
         run: |
         # Проверяем реальный результат тестов
-          if [ "${{ steps.playwright.outcome }}" = "success" ]; then
-           TEXT="✅ *Тесты пройдены!*\n\n"
-          else
+         if [ "${{ steps.playwright.outcome }}" = "success" ]; then
+          TEXT="✅ *Тесты пройдены!*\n\n"
+         else
            TEXT="❌ *Тесты не пройдены!*\n\n"
-          fi
+         fi
 
       # Добавляем детали
-          TEXT+="🚀 *Результаты автотестов*\n"
-          TEXT+="📂 Проект: `${{ github.repository }}`\n"
-          TEXT+="🔢 Прогон: $GITHUB_RUN_ID\n"
-          TEXT+="📅 Дата: $(date '+%d.%m.%Y %H:%M:%S')\n"
-          TEXT+="🔗 [Открыть отчет автотестов](https://brcd7735.github.io/API_CRM_playwright/)"
+         TEXT+="🚀 *Результаты автотестов*\n"
+         TEXT+="📂 Проект: `${{ github.repository }}`\n"
+         TEXT+="🔢 Прогон: $GITHUB_RUN_ID\n"
+         TEXT+="📅 Дата: $(date '+%d.%m.%Y %H:%M:%S')\n"
+         TEXT+="🔗 [Открыть отчет автотестов](https://brcd7735.github.io/API_CRM_playwright/)"
       
       # Отправляем в Telegram
-          curl -s -X POST \
-            "https://api.telegram.org/bot ${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage" \
-            -d chat_id="${{ secrets.TELEGRAM_CHAT_ID }}" \
-            -d text="$TEXT" \
-            -d parse_mode=MarkdownV2  # ← Изменение здесь
+         curl -s -X POST \
+          "https://api.telegram.org/bot ${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage" \
+          -d chat_id="${{ secrets.TELEGRAM_CHAT_ID }}" \
+          -d text="$TEXT" \
+          -d parse_mode=MarkdownV2  # ← Изменение здесь
 
       - name: Deploy to GitHub Pages
         if: success()
