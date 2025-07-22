@@ -13,6 +13,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: ⏱ Запомнить время старта
+        run: |
+          echo "START_TIME=$(date +%s)" >> $GITHUB_ENV
       - name: 🚀 Уведомление о старте в Telegram
         run: |
           curl -s -X POST \
@@ -68,7 +71,7 @@ jobs:
         if: always()
         run: |
           # Получаем время начала и конца в секундах
-          START_TIME=$(echo "${{ github.event.workflow_run.created_at }}" | date -u -f '%Y-%m-%dT%H:%M:%SZ' +%s 2>/dev/null || echo $(date -d '1 hour ago' +%s))
+          START_TIME=${{ env.START_TIME }}
           END_TIME=$(date +%s)
           DURATION=$((END_TIME - START_TIME))
 
@@ -92,7 +95,7 @@ jobs:
           TEXT+="🔢 Прогон: $GITHUB_RUN_ID\n"
           TEXT+="⏱ Время выполнения: $DURATION_STR\n"
           TEXT+="📅 Дата: $(date '+%d.%m.%Y %H:%M:%S')\n"
-          TEXT+="🔗 <a href='https://brcd7735.github.io/API_CRM_playwright/ '>Открыть HTML-отчёт</a>"
+          TEXT+="🔗 <a href='https://brcd7735.github.io/API_CRM_playwright/'>Открыть HTML-отчёт</a>"
 
           # Отправляем
           curl -s -X POST \
