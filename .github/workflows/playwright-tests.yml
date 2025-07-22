@@ -42,7 +42,7 @@ jobs:
           echo "USER_PASSWORD=$USER_PASSWORD" >> .env
           echo "OPEN_API_URL=$OPEN_API_URL" >> .env
           echo "URL_CRM=$URL_CRM" >> .env
-          cat .env  # Для отладки (не покажет значение, если secret)
+          cat .env 
 
       - name: Run Playwright tests
         run: npx playwright test --config=playwright.config.js --reporter=list,json
