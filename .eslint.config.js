@@ -1,7 +1,9 @@
 
 const globals = require('globals');
+const js = require('@eslint/js');
 
 module.exports = [
+    js.configs.recommended,
     {
         files: ['**/*.js', '**/*.mjs', '**/*.cjs'],
         languageOptions: {
