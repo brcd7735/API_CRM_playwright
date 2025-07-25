@@ -201,6 +201,7 @@ jobs:
             Коммит: ${{ github.sha }}
             Номер запуска: ${{ github.run_number }}
             URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/
+            ----Сделай Pull Request ветки в MAIN----
 
       - name: Send Telegram notification - Deploy failed
         if: failure()
