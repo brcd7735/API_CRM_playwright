@@ -25,7 +25,7 @@ jobs:
         uses: appleboy/telegram-action@v0.1.1
         with:
           to: ${{ secrets.TELEGRAM_CHAT_ID }}
-          token: ${{ secrets.TELEGRAM_TOKEN }}
+          token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           message: |
             🔍 Началась проверка кода линтером!
             Репозиторий: ${{ github.repository }}
@@ -54,7 +54,7 @@ jobs:
         uses: appleboy/telegram-action@v0.1.1
         with:
           to: ${{ secrets.TELEGRAM_CHAT_ID }}
-          token: ${{ secrets.TELEGRAM_TOKEN }}
+          token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           message: |
             ✅ Проверка линтером успешно завершена!
             Репозиторий: ${{ github.repository }}
@@ -67,7 +67,7 @@ jobs:
         uses: appleboy/telegram-action@v0.1.1
         with:
           to: ${{ secrets.TELEGRAM_CHAT_ID }}
-          token: ${{ secrets.TELEGRAM_TOKEN }}
+          token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           message: |
             ❌ Проверка линтером провалена!
             Репозиторий: ${{ github.repository }}
@@ -95,7 +95,7 @@ jobs:
         uses: appleboy/telegram-action@v0.1.1
         with:
           to: ${{ secrets.TELEGRAM_CHAT_ID }}
-          token: ${{ secrets.TELEGRAM_TOKEN }}
+          token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           message: |
             🧪 Начался запуск тестов!
             Репозиторий: ${{ github.repository }}
@@ -144,7 +144,7 @@ jobs:
         uses: appleboy/telegram-action@v0.1.1
         with:
           to: ${{ secrets.TELEGRAM_CHAT_ID }}
-          token: ${{ secrets.TELEGRAM_TOKEN }}
+          token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           message: |
             ✅ Все тесты успешно пройдены!
             Репозиторий: ${{ github.repository }}
@@ -157,7 +157,7 @@ jobs:
         uses: appleboy/telegram-action@v0.1.1
         with:
           to: ${{ secrets.TELEGRAM_CHAT_ID }}
-          token: ${{ secrets.TELEGRAM_TOKEN }}
+          token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           message: |
             ❌ Тесты провалены!
             Репозиторий: ${{ github.repository }}
@@ -193,7 +193,7 @@ jobs:
         uses: appleboy/telegram-action@v0.1.1
         with:
           to: ${{ secrets.TELEGRAM_CHAT_ID }}
-          token: ${{ secrets.TELEGRAM_TOKEN }}
+          token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           message: |
             📊 Отчет о тестах задеплоен в GitHub Pages!
             Репозиторий: ${{ github.repository }}
@@ -207,7 +207,7 @@ jobs:
         uses: appleboy/telegram-action@v0.1.1
         with:
           to: ${{ secrets.TELEGRAM_CHAT_ID }}
-          token: ${{ secrets.TELEGRAM_TOKEN }}
+          token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           message: |
             ❌ Ошибка при деплое отчета в GitHub Pages!
             Репозиторий: ${{ github.repository }}
@@ -234,7 +234,7 @@ jobs:
         uses: appleboy/telegram-action@v0.1.1
         with:
           to: ${{ secrets.TELEGRAM_TO }}
-          token: ${{ secrets.TELEGRAM_TOKEN }}
+          token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           message: |
             🔄 Начало процесса автоматического мержа...
             Репозиторий: ${{ github.repository }}
@@ -300,7 +300,7 @@ jobs:
         uses: appleboy/telegram-action@v0.1.1
         with:
           to: ${{ secrets.TELEGRAM_CHAT_ID }}
-          token: ${{ secrets.TELEGRAM_TOKEN }}
+          token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           message: |
             ✅ Автоматический мерж включен!
             Репозиторий: ${{ github.repository }}
@@ -314,7 +314,7 @@ jobs:
         uses: appleboy/telegram-action@v0.1.1
         with:
           to: ${{ secrets.TELEGRAM_CHAT_ID }}
-          token: ${{ secrets.TELEGRAM_TOKEN }}
+          token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           message: |
             ❌ Ошибка при настройке автоматического мержа!
             Репозиторий: ${{ github.repository }}
