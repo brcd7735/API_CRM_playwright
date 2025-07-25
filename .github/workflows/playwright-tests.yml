@@ -1,4 +1,4 @@
-name: Code Check, Tests and Auto Merge
+name: Code Check,Tests and Auto Merge
 
 on:
   push:
