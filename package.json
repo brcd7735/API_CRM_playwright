@@ -1,7 +1,7 @@
 {
   "name": "apicrm_playwright",
   "version": "1.0.0",
-  "description": "open api Envycrm",
+  "description": "Open api Envycrm",
   "main": "index.js",
   "directories": {
     "test": "tests"
