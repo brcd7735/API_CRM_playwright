@@ -1,18 +1,24 @@
-module.exports = {
-    env: {
-        browser: true,
-        es2021: true,
-        node: true,
-    },
-    extends: [
-        'eslint:recommended',
-    ],
-    parserOptions: {
-        ecmaVersion: 12,
-        sourceType: 'module',
-    },
-    rules: {
-        'no-console': 'warn',
-        'no-unused-vars': 'warn'
-    },
-};
+
+const globals = require('globals');
+
+module.exports = [
+    {
+        files: ['**/*.js', '**/*.mjs', '**/*.cjs'],
+        languageOptions: {
+            ecmaVersion: 2021,
+            sourceType: 'module',
+            globals: {
+                ...globals.browser,
+                ...globals.node,
+                ...globals.es6
+            }
+        },
+        rules: {
+            'no-console': 'warn',
+            'no-unused-vars': 'warn',
+            'no-undef': 'error',
+            'semi': ['error', 'always'],
+            'quotes': ['error', 'single']
+        }
+    }
+];
