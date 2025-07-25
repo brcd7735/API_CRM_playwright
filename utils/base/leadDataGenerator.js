@@ -5,30 +5,30 @@ import {
     randomInboxType,
     randomPipeLine,
     randomTags, randomValueNumFields, randomValueTextFields
-} from "@utils/base/dataGenerator";
+} from '@utils/base/dataGenerator';
 
 export const generateLeadCreatePayload = function (includeEmployeeId = true) {
     const payload = {
-            method: "create",
+            method: 'create',
             pipeline_id: randomPipeLine(),
             inbox_type_id: randomInboxType(),
             visit_id: 0,
-            region: "Свердловская область",
-            timezone: "UTC+03:00",
+            region: 'Свердловская область',
+            timezone: 'UTC+03:00',
             tags: randomTags(),
-            record_link: "https://site.ru/upload/record.mp3 ",
+            record_link: 'https://site.ru/upload/record.mp3 ',
             values: {
                 name: generateRandomName(),
                 phone: generateRandomPhone(),
                 email: generateRandomEmail(),
-                comment: "comment",
-                utm_source: "test",
-                utm_medium: "test",
-                utm_campaign: "test",
-                utm_content: "test",
-                utm_term: "test",
-                google_client_id: "6578764735984494",
-                yandex_client_id: "53898484998788489498",
+                comment: 'comment',
+                utm_source: 'test',
+                utm_medium: 'test',
+                utm_campaign: 'test',
+                utm_content: 'test',
+                utm_term: 'test',
+                google_client_id: '6578764735984494',
+                yandex_client_id: '53898484998788489498',
                 custom: [
                     {
                         input_id: 33412,
@@ -54,57 +54,57 @@ export const generateLeadCreatePayload = function (includeEmployeeId = true) {
             },
             contact_data: [
                 {
-                    type: "work_phone",
+                    type: 'work_phone',
                     value: generateRandomPhone(),
-                    addon: "101"
+                    addon: '101'
                 },
                 {
-                    type: "mobile_phone",
+                    type: 'mobile_phone',
                     value: generateRandomPhone()
                 },
                 {
-                    type: "home_phone",
+                    type: 'home_phone',
                     value: generateRandomPhone()
                 },
                 {
-                    type: "email",
+                    type: 'email',
                     value: generateRandomEmail()
                 },
                 {
-                    type: "position",
-                    value: "vakhter"
+                    type: 'position',
+                    value: 'vakhter'
                 },
                 {
-                    type: "note",
-                    value: "auto"
+                    type: 'note',
+                    value: 'auto'
                 },
                 {
-                    type: "skype",
-                    value: "skype"
+                    type: 'skype',
+                    value: 'skype'
                 },
                 {
-                    type: "vkontakte",
-                    value: "vkontakte"
+                    type: 'vkontakte',
+                    value: 'vkontakte'
                 },
                 {
-                    type: "telegram",
-                    value: "telegram"
+                    type: 'telegram',
+                    value: 'telegram'
                 },
                 {
-                    type: "whatsapp",
+                    type: 'whatsapp',
                     value: generateRandomPhone()
                 },
                 {
-                    type: "facebook",
-                    value: "facebook"
+                    type: 'facebook',
+                    value: 'facebook'
                 },
                 {
-                    type: "instagram",
-                    value: "instagram"
+                    type: 'instagram',
+                    value: 'instagram'
                 },
                 {
-                    type: "viber",
-                    value: "viber"
+                    type: 'viber',
+                    value: 'viber'
                 }
             ]
     };
@@ -113,5 +113,5 @@ export const generateLeadCreatePayload = function (includeEmployeeId = true) {
         payload.employee_id = randomEmployee();
     }
     return payload;
-}
+};
 

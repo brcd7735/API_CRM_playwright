@@ -1,11 +1,11 @@
-import {expect} from "@playwright/test";
-import {LeadEndPoints} from "@utils/crm/api/lead/EndPoints";
-import {LeadSet} from "@utils/crm/api/lead/leadSet";
-import {randomEmployee} from "@utils/base/dataGenerator";
-import {DealGetById} from "@utils/crm/api/deal/dealGetById";
-import {generateLeadCreatePayload} from "@utils/base/leadDataGenerator";
+import { expect } from '@playwright/test';
+import { LeadEndPoints } from '@utils/crm/api/lead/EndPoints';
+import { LeadSet } from '@utils/crm/api/lead/leadSet';
+import { randomEmployee } from '@utils/base/dataGenerator';
+import { DealGetById } from '@utils/crm/api/deal/dealGetById';
+import { generateLeadCreatePayload } from '@utils/base/leadDataGenerator';
 
-export class LeadStart{
+export class LeadStart {
     constructor(request) {
         this.request = request;
     }
@@ -28,7 +28,7 @@ export class LeadStart{
                     user_id: 9134,
                     employee_id: randomEmployee()
                 }
-            })
+            });
             const responseData = await response.json();
             expect(responseData).toBeDefined();
             expect(responseData.status_code).toBe(200);

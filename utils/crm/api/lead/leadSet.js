@@ -1,4 +1,4 @@
-import {LeadEndPoints} from "@utils/crm/api/lead/EndPoints";
+import { LeadEndPoints } from '@utils/crm/api/lead/EndPoints';
 
 export class LeadSet {
     constructor(request) {

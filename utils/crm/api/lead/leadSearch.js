@@ -1,6 +1,6 @@
-import {expect} from "@playwright/test";
-import {LeadEndPoints} from "@utils/crm/api/lead/EndPoints";
-import {LeadList} from "@utils/crm/api/lead/leadList";
+import { expect } from '@playwright/test';
+import { LeadEndPoints } from '@utils/crm/api/lead/EndPoints';
+import { LeadList } from '@utils/crm/api/lead/leadList';
 
 export class LeadSearch {
     constructor(request) {
@@ -14,7 +14,7 @@ export class LeadSearch {
         const responseListData = await getListLeads.getLeadList();
         expect(responseListData).toBeDefined();
         expect(responseListData.status_code).toBe(200);
-        const {result: getLeadData} = responseListData?.leads;
+        const { result: getLeadData } = responseListData?.leads;
         if (!getLeadData?.length) {
             throw new Error('Массив result пуст.');
         }
@@ -31,7 +31,7 @@ export class LeadSearch {
                     email: email,
                     phone: phone
                 }
-            })
+            });
             const responseSearchLead = await response.json();
             expect(responseSearchLead).toBeDefined();
             expect(responseSearchLead.status_code).toBe(200);

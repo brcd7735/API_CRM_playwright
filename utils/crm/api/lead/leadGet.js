@@ -1,8 +1,8 @@
-import {LeadEndPoints} from "@utils/crm/api/lead/EndPoints";
-import {expect} from "@playwright/test";
+import { LeadEndPoints } from '@utils/crm/api/lead/EndPoints';
+import { expect } from '@playwright/test';
 
-export class LeadGet{
-    constructor(request){
+export class LeadGet {
+    constructor(request) {
         this.request = request;
     }
 
