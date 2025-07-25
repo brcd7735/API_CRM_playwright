@@ -7,7 +7,7 @@ export class BaseApi {
     }
 
     getUrl(url) {
-        return `${this.apiUrl}${url}?api_key=${this.apiKey}`
+        return `${this.apiUrl}${url}?api_key=${this.apiKey}`;
     }
 
 }

@@ -1,6 +1,6 @@
-import {test, expect}  from "@playwright/test";
-import {LeadSet} from '@utils/crm/api/lead/leadSet';
-import {generateLeadCreatePayload} from "@utils/base/leadDataGenerator";
+import { test, expect } from '@playwright/test';
+import { LeadSet } from '@utils/crm/api/lead/leadSet';
+import { generateLeadCreatePayload } from '@utils/base/leadDataGenerator';
 
 
 test('POST /openapi/v1/lead/set/', async ({ page, request }) => {
@@ -13,11 +13,11 @@ test('POST /openapi/v1/lead/set/', async ({ page, request }) => {
 
         const includeEmployeeId = true;
         const payload = generateLeadCreatePayload(includeEmployeeId);
-        console.log(payload.employee_id)
+        console.log(payload.employee_id);
         const response = await leadGenerator.createLeadRequest(payload);
         expect(response).toBeDefined();
         await page.waitForTimeout(4000);
     }
 
-})
+});
 

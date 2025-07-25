@@ -1,4 +1,4 @@
-import {BaseApi} from "@utils/base/baseApi";
+import { BaseApi } from '@utils/base/baseApi';
 
 export class InfoCrmEndPoints extends BaseApi {
     constructor(request) {
@@ -12,7 +12,7 @@ export class InfoCrmEndPoints extends BaseApi {
     }
 
     mainDataUrl() {
-        return this.getUrl(this.mainData)
+        return this.getUrl(this.mainData);
     }
 
     customStatUrl() {
@@ -49,43 +49,43 @@ export class LeadEndPoints extends BaseApi {
     }
 
     leadSetUrl() {
-        return this.getUrl(this.leadSet)
+        return this.getUrl(this.leadSet);
     }
 
     leadWorkSetUrl() {
-        return this.getUrl(this.leadWorkset)
+        return this.getUrl(this.leadWorkset);
     }
 
     leadGetUrl() {
-        return this.getUrl(this.leadGet)
+        return this.getUrl(this.leadGet);
     }
 
     leadSearchUrl() {
-        return this.getUrl(this.leadSearch)
+        return this.getUrl(this.leadSearch);
     }
 
     leadListUrl() {
-        return this.getUrl(this.leadList)
+        return this.getUrl(this.leadList);
     }
 
     leadStartUrl() {
-        return this.getUrl(this.leadStart)
+        return this.getUrl(this.leadStart);
     }
 
     leadLogListUrl() {
-        return this.getUrl(this.leadLogList)
+        return this.getUrl(this.leadLogList);
     }
 
     leadLogCreateUrl() {
-        return this.getUrl(this.leadLogCreate)
+        return this.getUrl(this.leadLogCreate);
     }
 
     updateLeadValueUrl() {
-        return this.getUrl(this.leadUpdateLeadValue)
+        return this.getUrl(this.leadUpdateLeadValue);
     }
 
     leadUpdateEmployeeUrl() {
-        return this.getUrl(this.leadUpdateEmployee)
+        return this.getUrl(this.leadUpdateEmployee);
     }
 }
 
@@ -114,71 +114,71 @@ export class DealEndPoints extends BaseApi {
     }
 
     getDealById() {
-        return this.getUrl(this.dealGet)
+        return this.getUrl(this.dealGet);
     }
 
     createDeal() {
-        return this.getUrl(this.dealCreate)
+        return this.getUrl(this.dealCreate);
     }
 
     searchDeal() {
-        return this.getUrl(this.dealSearch)
+        return this.getUrl(this.dealSearch);
     }
 
     updateStageDeal() {
-        return this.getUrl(this.dealUpdateStage)
+        return this.getUrl(this.dealUpdateStage);
     }
 
     updateEmployeeDeal() {
-        return this.getUrl(this.dealUpdateEmployee)
+        return this.getUrl(this.dealUpdateEmployee);
     }
 
     toInboxDeal() {
-        return this.getUrl(this.dealToInbox)
+        return this.getUrl(this.dealToInbox);
     }
 
     getlistDeal() {
-        return this.getUrl(this.dealList)
+        return this.getUrl(this.dealList);
     }
 
     logListDeal() {
-        return this.getUrl(this.dealLogList)
+        return this.getUrl(this.dealLogList);
     }
 
     logCreateDeal() {
-        return this.getUrl(this.dealLogCreate)
+        return this.getUrl(this.dealLogCreate);
     }
 
     createCommentDeal() {
-        return this.getUrl(this.dealCreateComment)
+        return this.getUrl(this.dealCreateComment);
     }
 
     updateTaskDeal() {
-        return this.getUrl(this.dealUpdateTask)
+        return this.getUrl(this.dealUpdateTask);
     }
 
     updateInputsValueDeal() {
-        return this.getUrl(this.dealUpdateInputsValue)
+        return this.getUrl(this.dealUpdateInputsValue);
     }
 
     addTagsDeal() {
-        return this.getUrl(this.dealAddTags)
+        return this.getUrl(this.dealAddTags);
     }
 
     getListInputsDeal() {
-        return this.getUrl(this.dealGetListInputs)
+        return this.getUrl(this.dealGetListInputs);
     }
 
     getInputDeal() {
-        return this.getUrl(this.dealGetInput)
+        return this.getUrl(this.dealGetInput);
     }
 
     taskListDeal() {
-        return this.getUrl(this.dealTaskList)
+        return this.getUrl(this.dealTaskList);
     }
 
     getActivTasksDeal() {
-        return this.getUrl(this.dealGetActivTasks)
+        return this.getUrl(this.dealGetActivTasks);
     }
 }
 

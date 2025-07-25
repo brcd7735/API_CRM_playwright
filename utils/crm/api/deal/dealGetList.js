@@ -1,5 +1,5 @@
-import {DealEndPoints} from "@utils/crm/api/lead/EndPoints";
-import {expect} from "@playwright/test";
+import { DealEndPoints } from '@utils/crm/api/lead/EndPoints';
+import { expect } from '@playwright/test';
 
 export class DealGetList {
     constructor(request) {

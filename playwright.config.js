@@ -15,7 +15,7 @@ module.exports = defineConfig({
   workers: process.env.CI ? 1 : undefined,
   reporter: [
     ['list'], // Консольный вывод
-    ['json', { outputFile: 'test-results/results.json'}],
+    ['json', { outputFile: 'test-results/results.json' }],
     ['html', { outputFolder: 'test-results/html-report' }]
   ],
   use: {

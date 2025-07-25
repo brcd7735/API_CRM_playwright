@@ -1,12 +1,12 @@
-import {InfoCrmEndPoints} from "@utils/crm/api/lead/EndPoints";
+import { InfoCrmEndPoints } from '@utils/crm/api/lead/EndPoints';
 
-export class MainData{
-    constructor(request){
+export class MainData {
+    constructor(request) {
         this.request = request;
     }
 
     async GetMainDataCrm() {
-        const urlData = new InfoCrmEndPoints()
+        const urlData = new InfoCrmEndPoints();
         const url = urlData.mainDataUrl();
 
         try {

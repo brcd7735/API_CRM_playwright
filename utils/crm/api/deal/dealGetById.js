@@ -1,6 +1,6 @@
-import {DealEndPoints} from "@utils/crm/api/lead/EndPoints";
-import {DealGetList} from "@utils/crm/api/deal/dealGetList";
-import {expect} from "@playwright/test";
+import { DealEndPoints } from '@utils/crm/api/lead/EndPoints';
+import { DealGetList } from '@utils/crm/api/deal/dealGetList';
+import { expect } from '@playwright/test';
 
 export class DealGetById {
     constructor(request) {
@@ -34,7 +34,7 @@ export class DealGetById {
             expect(responseDealById).toBeDefined();
             expect(responseDealById.status_code).toBe(200);
             return responseDealById;
-        }  catch (error) {
+        } catch (error) {
             console.error('Ошибка при отправке POST-запроса:', error.message);
             throw error;
         }
