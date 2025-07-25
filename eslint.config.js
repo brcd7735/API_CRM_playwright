@@ -9,7 +9,7 @@ module.exports = [
             'playwright-report/',
             '.github/',
             'test-results/',
-
+            '.idea/'
         ]
     },
     {
